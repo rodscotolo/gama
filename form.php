@@ -13,7 +13,13 @@ if(isset($_POST['Submit'])) {
 
 	$result = mysqli_query($mysqli, "INSERT INTO user(name,email,telefone,curso) VALUES('$nome','$email','$telefone','$curso')");
 
-		echo ($result);
+		if ($result = 1) {
+			echo 'Usuario gravado com sucesso';
+
+		}else {
+			echo 'erro na gravação';
+
+		}
 	}
 
 ?>
