@@ -14,12 +14,12 @@ class LeadsTable extends Table
         $this->addBehavior('Timestamp');
     }
 
-    //public function validationDefault(Validator $validator)
-    //{
-      //  $validator
-        //    ->notEmpty('title')
-          //  ->notEmpty('body');
+    public function validationDefault(Validator $validator)
+    {
+       $validator
+           ->notEmpty('nome')
+           ->notEmpty('email');
 
-    //    return $validator;
-    //}
+       return $validator;
+    }
 }

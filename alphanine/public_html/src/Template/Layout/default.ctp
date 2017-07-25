@@ -18,6 +18,7 @@ $cakeDescription = 'AlphaNine';
 <!DOCTYPE html>
 <html>
 <head>
+   <link rel="stylesheet" href="/webroot/font-awesome-4.7.0/css/font-awesome.css">
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -27,7 +28,7 @@ $cakeDescription = 'AlphaNine';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
-    <!-- <?= $this->Html->css('cake.css') ?> -->  <!-- desativei pq o stylesheet estava me incomodando, se ferrar em algo é só ativar -->
+    <!-- <?= $this->Html->css('cake.css') ?> -->  <!-- desativei pq o stylesheet estava me incomodando, se ferrar em algo � s� ativar -->
     <?= $this->Html->css('alpha.css') ?>
 
     <?= $this->fetch('meta') ?>
@@ -53,7 +54,10 @@ $cakeDescription = 'AlphaNine';
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><a target="_blank" href="">Sobre nós!</a></li>
+                <li><a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                 <li><a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
               </ul>
         </div>
     </nav>
@@ -61,7 +65,6 @@ $cakeDescription = 'AlphaNine';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
-    </footer>
+  
 </body>
 </html>

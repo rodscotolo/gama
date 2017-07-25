@@ -1,35 +1,36 @@
-</<?php
+<?php
 
-namespace App\Controller
+// src/Controller/LeadsController.php
 
-class LeadsController extends AppController {
+namespace App\Controller;
 
+class LeadsController extends AppController
+{
 
-  public function initialize()
+	public function initialize()
     {
         parent::initialize();
 
         $this->loadComponent('Flash'); // Inclui o FlashComponent
     }
 
+public function index(){
+$this->set('title_for_layout',$title);
 
-  public function add()
-    {
-    		$lead = $this->Leads->newEntity();
-    			//$leads = $this->Lead->newEntity();
-    		if ($this->request->is('post')) {
-    			$lead = $this->Leads->patchEntity($lead, $this->request->getData());
-    			if ($this->Leads->save($lead)) {
-  					$this->Flash->success(__('Seu artigo foi salvo.'));
-  					return $this->redirect(['action' => 'index']);
-  				}
-  			  $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
-    		}
-    		$this->set('lead', $lead);
-    	}
-
-
+	ini_set( 'date.timezone', 'America/Sao_Paulo' );
+  $lead = $this->Leads->newEntity();
+  if ($this->request->is('post')) {
+		$dados = $this->request->getData();
+		$dados['datahora'] = date('Y-m-d H:i:s');
+    $lead = $this->Leads->patchEntity($lead, $dados);
+    if ($this->Leads->save($lead)) {
+      $this->Flash->success(__('Salvo com sucesso'));
+      return $this->redirect(['action' => 'index']);
+    }
+  $this->Flash->error(__('Erro ao salvar'));
+  }
+  $this->set('lead', $lead);
 }
 
 
- ?>
+}

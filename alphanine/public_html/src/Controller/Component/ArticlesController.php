@@ -25,7 +25,7 @@ class ArticlesController extends AppController
         $this->set(compact('article'));
     }
 
-
+    
     public function add()
     {
         $article = $this->Articles->newEntity();
@@ -39,19 +39,4 @@ class ArticlesController extends AppController
         }
         $this->set('article', $article);
     }
-
-		public function lead(){
-			$lead = $this->Leads->newEntity();
-			//$leads = $this->Lead->newEntity();
-			if ($this->request->is('post')) {
-				$lead = $this->Leads->patchEntity($lead, $this->request->getData());
-				if ($this->Leads->save($lead)) {
-					$this->Flash->success(__('Seu artigo foi salvo.'));
-					return $this->redirect(['action' => 'index']);
-				}
-			$this->Flash->error(__('Não é possível adicionar o seu artigo.'));
-			}
-			$this->set('lead', $lead);
-		}
-
 }
