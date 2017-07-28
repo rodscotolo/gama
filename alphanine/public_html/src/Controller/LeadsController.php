@@ -15,7 +15,8 @@ class LeadsController extends AppController
     }
 
 public function index(){
-$this->set('title_for_layout',$title);
+	$title = 'Welcome!';
+	$this->set(compact('title'));
 
 	ini_set( 'date.timezone', 'America/Sao_Paulo' );
   $lead = $this->Leads->newEntity();
@@ -30,6 +31,18 @@ $this->set('title_for_layout',$title);
   $this->Flash->error(__('Erro ao salvar'));
   }
   $this->set('lead', $lead);
+}
+
+function isNomeCompleto($nomeCompleto) {
+	$nomeCompleto = trim($nomeCompleto);
+	$arrNome = explode(" ", $nomeCompleto);
+	if(count($arrNome) > 1)    return true;
+	return false;
+}
+
+
+public function contando(){
+	   $this->set('leads', $this->Leads->find('all'));
 }
 
 

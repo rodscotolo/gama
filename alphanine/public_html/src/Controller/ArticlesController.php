@@ -18,7 +18,11 @@ class ArticlesController extends AppController
     {
 			$this->set('title_for_layout',$title);
 
-         $this->set('articles', $this->Articles->find('all'));
+         $this->set('articles', $this->Articles->find('all',
+			 																						array(
+																												'order' => 'article.id DESC',
+																											)
+			 																									));
 
     }
 

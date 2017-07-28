@@ -2,22 +2,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper{
-    width: 60% !important;
-    margin: auto;
-    background-color: #FF0FFF;
 
-}
-
-.formright{
-     width: 400px;
-    float: right;
-    padding: 15px;
-    color: #FFF;
-
-    margin-bottom: 25px;
-    margin-top: 50px;
-}
 
 
 label{
@@ -26,35 +11,275 @@ label{
 
 h1{
     color: #FFF;
+    
 }
-.saibaleft{
-    color: #FFF;
-    margin-top: 25px;
-    width: 450px;
-    padding: 15px;
-    height: auto;
-    float: left;
-    clear: both;
+.wrapper{
+    width: 60% !important;
+    margin: auto;
+    
+   text-align: center !important;
+
 }
 
-.container{
-    background-color: #221b28;
+
+
+.saibaleft{
+    
+   text-align: center !important;
+    
+    padding: 5px;
+    height: auto;
 }
+
+.formright{
+    padding: 40px !important;
+    color: #FFF;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    background-color: #30293f;
+}
+
+
+
+
 
 button{
     border-radius: 50px;
+    background-color:#9d0ce8;
+    border: solid #40b2df 4px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .alpha-text{
-    font-size: 16px;
+    color: #FFF;
+    font-size: 20px;
+    width: 60%;
+    display: inline-block;
+    margin: 20px;
+    min-width: auto;
 }
 
 .alpha-big-text{
-    text-align: justify;
+    
+    margin-top: 30px;
     display: inline-block;
 }
 
 .description{
     width: 60%;
     margin: auto;
+}
+
+.alpha-logo{
+    
+   
+}
+
+
+
+.ev-content {
+  background: -webkit-linear-gradient(165deg, rgb(73, 50, 77), rgb(9, 27, 42))!important;
+  background: linear-gradient(165deg, rgb(73, 50, 77), rgb(9, 27, 42))!important;
+}
+
+
+#nome{
+    display: inline-block;
+}
+#email{
+    display: inline-block
+}
+
+.quer{
+    font-size: 22px;
+}
+
+#centeredarticle{
+    padding: 30px;
+    margin-top: 10px;
+    background-color: #EBEBEB;
+    font-family: 'sweetwear';
+    src: url('sweetwear.otf');
+}
+
+.articletitle{
+    margin-top: 20px;
+    border: none;
+    height: 50px;
+    background-color: #CCC !important;
+}
+.articlebody{
+    background-color: #CCC;
+    border: none;
+    height: auto;
+    padding: 0px 30px 50px 30px;
+     margin: 0px;
+}
+
+table{
+    margin: 0px;
+}
+
+
+td{
+    font-size: 22px;
+}
+
+.name{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #9d0ce8;
+}
+
+
+footer{
+    
+    background-color: #333;
+}
+.foot{
+    color: #FFF;
+    padding: 30px;
+    height: auto;
+     width: 60%;
+    margin: auto;
+}
+
+
+ a.footlink{
+    color: #FFF !important;
+}
+
+.footlink{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.footsocial{
+    float:right;
+}
+
+.name{
+     margin-left: 20px;   
+}
+
+
+.img-alpha{
+    margin-left: 10px !important;
+     margin-top: 10px !important;
+    display: inline-block;
+}
+
+a{
+    color: #000;
+}
+
+#addarticle{
+    border: 30px solid rgba(63, 177, 222, 0.1);
+    margin-top: 10%;
+    padding: 30px;
+    background-color: #30293f;
+}
+
+
+.sobre{
+    
+}
+.deseja{
+
+}
+
+
+
+
+
+
+
+
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 126px;
+  }
+}
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: bolder;
+    
+}
+
+.leftie{
+    display: inline-block;
+}
+
+.wrapperbtn{
+    text-align: center;
 }

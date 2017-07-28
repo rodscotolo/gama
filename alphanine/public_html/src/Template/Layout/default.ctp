@@ -49,7 +49,7 @@ $cakeDescription = 'AlphaNine';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <div class="alpha-logo"></div>
+                <div class="">AlphaNine</div>
             </li>
         </ul>
         <div class="top-bar-section">
@@ -65,6 +65,6 @@ $cakeDescription = 'AlphaNine';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
-  
+
 </body>
 </html>

@@ -10,7 +10,10 @@
                   <table class="articletitle">
                   <tr>
                       <td>
-                      <h1 align="center">  <?=$this->Html->link($article->title, ['action' => 'view', $article->id]);?> </h1> <br/>
+                        <?=$article->id ,' - ', $this->Html->link($article->title, ['action' => 'view', $article->id]) ?><br/>
+                    </td>
+                    <td>
+                        <?= $article->created?>
                     </td>
                 </tr>
              </table>
@@ -20,7 +23,6 @@
                   <?= $preview = $article->body?>
                     <td>
                 </tr>
-                <tr>
 
 
                 <?php endforeach; ?>
